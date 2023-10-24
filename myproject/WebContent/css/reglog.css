@@ -1,0 +1,295 @@
+/* 全局属性 */
+html, body, div, span, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, address, big, cite, code, del, em, font, img, ins, small, strong, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial,"宋体",Lucida,Verdana,Helvetica,sans-serif;
+    font-size: 12px;
+    color: #333;
+	background: #f2f2f2;
+	display: block;
+}
+a:link, a:visited {
+    color: #333;
+    text-decoration: none;
+}
+a:hover{
+	color:red;
+}
+ol, ul {
+    list-style: none;
+}
+.w {
+    width: 990px;
+    padding: 0;
+    margin: 0 auto;
+}
+
+/* 收藏和登录条 */
+#top {
+    width: 100%;
+    border-bottom: 1px solid #eee;
+    line-height: 30px;
+	height: 30px;
+    background: #FAFAFA;
+}
+#top_left{
+	float: left;
+	height: 30px;
+}
+#top_left b{
+	display:block;
+	float: left;
+	margin-top:8px;
+	margin-right:3px;
+    width: 13px;
+    height: 13px;
+	background-image: url(i/20130330A.png);
+    background-repeat: no-repeat;
+    background-position: -90px -23px;
+}
+#top_right{
+	float:right;
+}
+#top_right li{
+	float:left;
+	height:30px;
+}
+#top_right li s{
+	float:left;
+	margin-top: 9px;
+    height: 12px;
+    border-left: 1px solid #DDD;
+}
+#top_right li a{
+	float:left;
+	padding: 0px 10px;
+}
+#top_right li b{
+	float:left;
+	margin:13px 8px 0px 0px;
+    width: 7px;
+    height: 4px;
+	background-image: url(i/20130330A.png);
+    background-repeat: no-repeat;
+    background-position: -95px -55px;
+}
+
+/* LOGO */
+#logo {
+	height: 60px;
+    padding: 10px 0;
+}
+#logo a{
+	display:block;
+	float:left;
+	width:170px;
+	height:60px;
+	background-image: url(i/logo-2013.png);
+}
+#logo b{
+	float:left;
+    background: url(i/regist-word.png) no-repeat;
+    width: 111px;
+    height: 46px;
+	margin-top:8px;
+	margin-left:10px;
+}
+
+/* 注册表单 */
+#regist {
+    background: #FFF;
+	margin-bottom: 10px;
+}
+#reg_top{
+	background: #f2f2f2;
+	height:32px;
+	border-bottom: 1px solid #dddddd;
+}
+#reg_top ul{
+	float:left;
+	height: 33px;
+    padding-left: 277px;
+	margin-right:70px;
+}
+#reg_top ul li{
+	border: 1px solid #dddddd;
+	background: #f7f7f7;
+	display:block;
+	float:left;
+	margin-right: 5px;
+	margin-top: 3px;
+	font-size: 14px;
+	height: 28px;
+	text-align: center;
+}
+#reg_top ul li:hover{
+	margin-top: 0px;
+	height: 31px;
+}
+#reg_top ul li a{
+	padding:6px 24px;
+	height: 34px;
+	display: block;
+}
+#reg_top ul li.curr{
+	margin-top: 0px;
+	border-bottom:0px;
+	background: #ffffff;
+    color: #e4393c;
+    height: 32px;
+	line-height: 32px;
+    font-weight: bold;
+}
+#reg_top ul li.curr a{
+	padding:0px 20px;
+}
+#reg_top p{
+	float:left;
+	padding-top:14px;
+}
+#reg_top p a{
+	color: #005AA0;
+	margin-left:3px;
+	margin-right:15px;
+}
+#reg_main{
+	padding: 30px 0 20px;
+    border: solid #dddddd;
+    border-width: 0px 1px 1px;
+	overflow:hidden;
+}
+#reg_form{
+	float: left;
+    width: 750px;
+}
+#reg_form .item{
+	padding-top: 9px;
+    height: 60px;
+    line-height: 34px;
+}
+#reg_form .item > span{
+	display:block;
+	float:left;
+	width: 190px;
+    text-align: right;
+    font-size: 14px;
+    color: #999;
+    padding-right: 10px;
+}
+#reg_form .item span b{
+	color:red;
+	margin-right: 5px;
+    font-size: 20px;
+    font-weight: normal;
+}
+#reg_form .item > div{
+	float:left;
+	position:relative;
+}
+#reg_form .item input[type=text],[type=password],[type=number],[type=tel],[type=email],[type=time],[type=date]{
+	display:block;
+	float:left;
+	border: 1px solid #cccccc;
+    color: #000;
+	width: 238px;
+    height: 16px;
+	padding: 10px 25px 10px 5px;
+	font-size: 14px;
+}
+#reg_form .item input[type=date]{
+	font-size:4px;
+}
+#reg_form .item [class^=i-]{
+	display:inline;
+	float:left;
+    height: 22px;
+    width: 16px;
+	position:absolute;
+	right:9px;
+    top: 9px;
+}
+#reg_form .item .i-name{
+	background: url(i/one4.jpg) no-repeat scroll 0 0 transparent;
+}
+#reg_form .item .i-pwd{
+	background: url(i/one5.jpg) no-repeat scroll 0 0 transparent;
+}
+#reg_form .item .i-phone{
+	background: url(i/one6.jpg) no-repeat scroll 0 0 transparent;
+}
+#reg_form .item b[class=label]{
+	color: #999;
+	margin-left: 5px;
+	font-weight:normal;
+}
+#reg_form .item a[class=otherway]{
+	text-decoration: underline;
+	margin-left:5px;
+	color: #005ea7;
+}
+#reg_form .item input.code{
+	width:100px;
+}
+#reg_form .item img.passcode{
+	display:block;
+	float:left;
+	width:100px;
+	height:36px;
+	margin: 0 5px;
+}
+#reg_form .item a.code{
+	display:block;
+	float:left;
+	color: #333;
+    text-decoration: none;
+	margin-left: 10px;
+    border: 1px solid #dddddd;
+	width: 106px;
+    height: 36px;
+    background: #f4f4f4;
+	text-align: center;
+    line-height: 36px;
+}
+#reg_form .item a.code:hover{
+	text-decoration:underline;
+}
+#reg_form .item b{
+	font-weight:normal;
+}
+#reg_form .item a{
+	text-decoration: none;
+	color: #005ea7;
+}
+#reg_form .item a:hover{
+	text-decoration:underline;
+}
+#reg_form .item input[type=button]{
+	width: 270px;
+    height: 36px;
+	padding:0px;
+	margin:0px;
+	border:0px;
+	background: url(i/regist-btn.jpg) no-repeat;
+	cursor: pointer;
+}
+#reg_form .item input[type=button]:hover{
+	background: url(i/hover-btn.jpg) no-repeat;
+}
+#reg_phone{
+	float:left;
+	margin-top:9px;
+}
+
+/* 页脚 */
+#foot_bar {
+    text-align: center;
+}
+#foot_bar a{
+	margin: 0 10px;
+}
+#footer {
+    text-align: center;
+	padding:10px 0px;
+}

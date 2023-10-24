@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.edu.mapper.AdminMapper">
+
+	<resultMap type="com.edu.entity.Admin" id="resultAdmin">
+		<id column="adid" property="adid" />
+		<result column="adname" property="adname" />
+		<result column="adpassword" property="adpassword" />
+	</resultMap>
+
+	<select id="SelectAllAdmins" resultMap="resultAdmin">
+		SELECT *
+		FROM
+		admin
+	</select>
+
+	<select id="SelectAdminsByParam" resultMap="resultAdmin"
+		parameterType="com.edu.entity.Admin">
+		SELECT *
+		FROM admin
+		where 1 = 1
+		<if test="adname != null and adname != ''">
+			and adname = #{adname}
+		</if>
+		<if test="adpassword != null and adpassword != ''">
+			and adpassword = #{adpassword}
+		</if>
+	</select>
+
+	<select id="SelectAdminById" resultMap="resultAdmin"
+		parameterType="int">
+		SELECT *
+		FROM admin where adid=#{adid}
+	</select>
+
+	<insert id="InsertAdmin" parameterType="com.edu.entity.Admin">
+		insert into
+		admin(adid,adname,adpassword,adstatus) values(#{adid},#{adname},#{adpassword},#{adstatus})
+	</insert>
+
+	<delete id="DeleteAdmin" parameterType="int">
+		delete from admin
+		where
+		adid = #{adid}
+	</delete>
+
+	<update id="UpdateAdmin" parameterType="com.edu.entity.Admin">
+		update admin
+		set adstatus
+		=#{adstatus}
+		where adid = #{adid}
+	</update>
+	
+</mapper>
